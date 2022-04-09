@@ -1,4 +1,4 @@
-package com.rodnog.rogermiddenway.unitconverter;
+package com.ayong.alfredyong.unitconverter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
     public Spinner unitSelectSpinner;
     public EditText input;
 
-    public TextView result1TextView;
-    public TextView result2TextView;
-    public TextView result3TextView;
+    public TextView output1TextView;
+    public TextView output2TextView;
+    public TextView output3TextView;
 
     public TextView unit1TextView;
     public TextView unit2TextView;
@@ -53,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
         celsiusButton = findViewById(R.id.celsiusButton);
         kilogramsButton = findViewById(R.id.kilogramsButton);
 
-        result1TextView = findViewById(R.id.result1TextView);
-        result2TextView = findViewById(R.id.result2TextView);
-        result3TextView = findViewById(R.id.result3TextView);
+        output1TextView = findViewById(R.id.output1TextView);
+        output2TextView = findViewById(R.id.output2TextView);
+        output3TextView = findViewById(R.id.output3TextView);
 
         unit1TextView = findViewById(R.id.unit1TextView);
         unit2TextView = findViewById(R.id.unit2TextView);
@@ -91,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
                     unit2TextView.setText("Kelvin");
 
 
-                    result1TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 1.8 + 32));
-                    result2TextView.setText(df.format(Double.parseDouble(input.getText().toString()) + 273.15));
+                    output1TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 1.8 + 32));
+                    output2TextView.setText(df.format(Double.parseDouble(input.getText().toString()) + 273.15));
 
 
                     break;
@@ -101,9 +101,9 @@ public class MainActivity extends AppCompatActivity {
                     unit2TextView.setText("Ounces");
                     unit3TextView.setText("Pounds");
 
-                    result1TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 1000));
-                    result2TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 35.274));
-                    result3TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 2.205));
+                    output1TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 1000));
+                    output2TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 35.274));
+                    output3TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 2.205));
 
                     break;
                 case "METRES":
@@ -111,9 +111,9 @@ public class MainActivity extends AppCompatActivity {
                     unit2TextView.setText("Feet");
                     unit3TextView.setText("Inches");
 
-                    result1TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 100));
-                    result2TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 3.281));
-                    result3TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 39.37));
+                    output1TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 100));
+                    output2TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 3.281));
+                    output3TextView.setText(df.format(Double.parseDouble(input.getText().toString()) * 39.37));
 
                     break;
                 default:
